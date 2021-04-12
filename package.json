@@ -8,7 +8,7 @@
   },
   "author": "Brad Traversy",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
