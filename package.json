@@ -12,8 +12,13 @@
   "dependencies": {
     "browser-sync": "^2.18.13",
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^5.0.0",
+    "gulp-autoprefixer": "^7.0.1",
     "gulp-build": "^0.5.3",
-    "gulp-sass": "^3.1.0"
-  }
+    "gulp-sass": "^4.1.0"
+  },
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "maintained node versions"
+  ]
 }

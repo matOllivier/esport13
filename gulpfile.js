@@ -18,20 +18,20 @@ gulp.task('sass', function() {
 
 
 // Watch Sass & Serve
-gulp.task('serve', ['sass'], function() {
+gulp.task('serve', gulp.series('sass', function() {
     browserSync.init({
         server: "./src"  
     });
 
     gulp.watch(['src/scss/*.scss'], ['sass']);
     gulp.watch("src/*.html").on('change', browserSync.reload);
-});
+}));
 
 // Default Task
-gulp.task('default', ['serve']);
+gulp.task('default', gulp.series('serve'));
 
 // Tâche "build"
-gulp.task('build', ['sass']);
+gulp.task('build', gulp.series('sass'));
 
 // Tâche "prod" = Build + minify
-gulp.task('prod', ['build',  'minify']);
+gulp.task('prod', gulp.series('build'));
