@@ -2,6 +2,7 @@ const gulp         = require('gulp');
 const browserSync  = require('browser-sync').create();
 const sass         = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
+const build        = require('gulp-build');
 
 // Compile Sass & Inject Into Browser
 gulp.task('sass', function() {
@@ -28,3 +29,9 @@ gulp.task('serve', ['sass'], function() {
 
 // Default Task
 gulp.task('default', ['serve']);
+
+gulp.task('build', function() {
+    gulp.src('src/scripts/*.js')
+        .pipe(build({ GA_ID: '123456' }))
+        .pipe(gulp.dest('dist'))
+  });
