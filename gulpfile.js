@@ -30,8 +30,8 @@ gulp.task('serve', ['sass'], function() {
 // Default Task
 gulp.task('default', ['serve']);
 
-gulp.task('build', function() {
-    gulp.src('src/scripts/*.js')
-        .pipe(build({ GA_ID: '123456' }))
-        .pipe(gulp.dest('dist'))
-  });
+// Tâche "build"
+gulp.task('build', ['sass']);
+
+// Tâche "prod" = Build + minify
+gulp.task('prod', ['build',  'minify']);
