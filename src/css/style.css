@@ -37,13 +37,15 @@ a {
   background-color: #fff;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   padding: 0 20px;
-  color: #223844; }
+  color: #223844;
+  z-index: 10; }
   .header__wrapper {
     height: 100%;
     max-width: 1400px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    align-items: center; }
     .header__wrapper .logo {
       display: flex;
       align-items: center;
@@ -51,7 +53,8 @@ a {
       height: 100%; }
       .header__wrapper .logo img {
         max-height: 50px;
-        margin-right: 10px; }
+        margin-right: 10px;
+        z-index: -1; }
       .header__wrapper .logo span {
         font-weight: 700;
         font-size: 22px; }
@@ -60,10 +63,10 @@ a {
       display: flex;
       align-items: center;
       justify-content: flex-end; }
-      .header__wrapper .nav a:not(.button) {
+      .header__wrapper .nav a:not(.button):not(.burger) {
         text-decoration: none;
         outline: none; }
-        .header__wrapper .nav a:not(.button) span {
+        .header__wrapper .nav a:not(.button):not(.burger) span {
           text-decoration: none;
           padding: 10px;
           font-weight: 500;
@@ -72,9 +75,74 @@ a {
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           font-size: 16px; }
-          .header__wrapper .nav a:not(.button) span:hover {
+          .header__wrapper .nav a:not(.button):not(.burger) span:hover {
             background: -webkit-linear-gradient(45deg, #db2955 0%, #ffc24d 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent; }
-      .header__wrapper .nav .button {
+    .header__wrapper .nav2 {
+      display: flex;
+      align-items: center; }
+      .header__wrapper .nav2 .button {
         margin-left: 6px; }
+      .header__wrapper .nav2 .burger {
+        height: 25px;
+        width: 30px;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 10px; }
+        .header__wrapper .nav2 .burger span {
+          height: 2px;
+          width: 100%;
+          background: linear-gradient(90deg, #223844 0%, #223844 100%);
+          transition: 0.2s ease-in; }
+        .header__wrapper .nav2 .burger:hover span {
+          background: linear-gradient(90deg, #db2955 0%, #ffc24d 100%); }
+        .header__wrapper .nav2 .burger.open span:nth-of-type(2) {
+          display: none; }
+        .header__wrapper .nav2 .burger.open span:nth-of-type(1) {
+          transform: rotate(45deg);
+          margin-top: 12px; }
+        .header__wrapper .nav2 .burger.open span:nth-of-type(3) {
+          transform: rotate(-45deg);
+          margin-bottom: 11px; }
+    .header__wrapper .overlay {
+      width: 0vw;
+      position: fixed;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+      height: 100vh;
+      transition: 0.2s ease-in;
+      opacity: 0;
+      bottom: 0;
+      right: 0; }
+
+@media screen and (max-width: 768px) {
+  .header__wrapper .nav {
+    position: fixed;
+    right: 0;
+    width: 0;
+    overflow: hidden;
+    height: 100vh;
+    bottom: 0;
+    background: #fff;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0px;
+    justify-content: center;
+    transition: 0.2s ease-in; }
+    .header__wrapper .nav a {
+      white-space: nowrap;
+      display: flex; }
+    .header__wrapper .nav.open {
+      display: flex;
+      width: 80%;
+      padding: 20px; }
+  .header__wrapper .nav2 .burger {
+    display: flex;
+    z-index: 1; }
+  .header__wrapper .nav2 .button {
+    z-index: 1; }
+  .header__wrapper .overlay.open {
+    width: 100vw;
+    opacity: 1; } }
