@@ -6,12 +6,9 @@ const build        = require('gulp-build');
 
 // Compile Sass & Inject Into Browser
 gulp.task('sass', function() {
-    return gulp.src(['src/scss/*.scss'])
+    return gulp.src(['src/scss/style.scss'])
         .pipe(sass())
-        .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
-        }))
+        .pipe(autoprefixer())
         .pipe(gulp.dest("src/css"))
         .pipe(browserSync.stream());
 });
@@ -23,7 +20,7 @@ gulp.task('serve', gulp.series('sass', function() {
         server: "./src"  
     });
 
-    gulp.watch(['src/scss/*.scss'], ['sass']);
+    gulp.watch('src/scss/*.scss', gulp.series('sass'));
     gulp.watch("src/*.html").on('change', browserSync.reload);
 }));
 

@@ -16,9 +16,8 @@
     "gulp-build": "^0.5.3",
     "gulp-sass": "^4.1.0"
   },
-  "browserslist": [
-    "defaults",
-    "not IE 11",
-    "maintained node versions"
-  ]
+  "browserslist": {
+    "browsers": "['last 2 versions']",
+    "cascade": "false"
+  }
 }

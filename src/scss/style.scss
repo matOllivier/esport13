@@ -1,7 +1,103 @@
-$bg-color: #333;
-$color: #fff;
+@import './font.scss';
+
+
+// Variables
+
+$torneablack: #223844;
+$torneagradient: linear-gradient(90deg, rgba(219,41,85,1) 0%, rgba(255,194,77,1) 100%);
+
 
 body {
-    background: $bg-color;
-    color:$color;
+    font-family: 'Poppins';
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+
+div{
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.button{
+    &.primary{
+        font-size: 16px;
+        font-weight: 600;
+        background: $torneagradient;
+        text-decoration: none;
+        padding: 8px 15px;
+        display: flex;
+        align-items: center;
+        color: #fff;
+        max-width: max-content;
+        border-radius: 20px;
+        transition: 0.2s ease-in;
+        &:hover{
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    }
+}
+
+.header{
+    max-width: 100vw;
+    position: sticky;
+    top: 0;
+    height: 80px;
+    background-color: #fff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    padding: 0 20px;
+    color: $torneablack;
+    &__wrapper{
+        height: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        .logo{
+            display: flex;
+            align-items: center;
+            max-height: 80px;
+            height: 100%;
+            img{
+                max-height: 50px;
+                margin-right: 10px;
+            }
+            span{
+                font-weight: 700;
+                font-size: 22px;
+            }
+        }
+        .nav{
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            a:not(.button){
+                text-decoration: none;
+                outline: none;
+                span{
+                    text-decoration: none;
+                    padding: 10px;
+                    font-weight: 500;
+                    transition: 0.2s ease-in;
+                    background: -webkit-linear-gradient($torneablack, $torneablack);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    font-size: 16px;
+                    &:hover{
+                        background: -webkit-linear-gradient(45deg, rgba(219,41,85,1) 0%, rgba(255,194,77,1) 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+            }
+            .button{
+                margin-left: 6px;
+            }
+        }
+    }
 }
