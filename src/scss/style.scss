@@ -4,6 +4,8 @@
 // Variables
 
 $torneablack: #223844;
+$torneagrey: #666171;
+$flatwhite: #f8fafa;
 $torneagradient: linear-gradient(90deg, rgba(219,41,85,1) 0%, rgba(255,194,77,1) 100%);
 
 
@@ -23,31 +25,82 @@ a{
     color: inherit;
 }
 
+h1{
+    font-size: 40px;
+    color: $torneablack;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+p{
+    color: $torneagrey;
+}
+
+
+
+
+// buttons design
 .button{
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    max-width: max-content;
+    border-radius: 20px;
+    transition: 0.2s ease-in;
+    white-space: nowrap;
+    cursor: pointer;
     &.primary{
-        font-size: 16px;
-        font-weight: 600;
         background: $torneagradient;
-        text-decoration: none;
         padding: 8px 15px;
-        display: flex;
-        align-items: center;
         color: #fff;
-        max-width: max-content;
-        border-radius: 20px;
-        transition: 0.2s ease-in;
+        &:hover{
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    }
+    &.secondary{
+        padding: 7px 14px;
+        position: relative;
+        color: $torneablack;
+        z-index: 1;
+        &:before{
+            width: calc(100% + 2px);
+            height: calc(100% + 2px);
+            content:"";
+            position: absolute;
+            left: -1px;
+            top: -1px;
+            z-index: -1;
+            background: $torneagradient;
+            border-radius: 20px;
+        }
+        &:after{
+            content:"";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: $flatwhite;
+            border-radius: 20px;
+            z-index: -1;
+        }
         &:hover{
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
     }
 }
 
+
+
+//header design
 .header{
     max-width: 100vw;
     position: sticky;
     top: 0;
     height: 80px;
-    background-color: #fff;
+    background-color: $flatwhite;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     padding: 0 20px;
     color: $torneablack;
@@ -148,6 +201,36 @@ a{
             opacity: 0;
             bottom: 0;
             right: 0;
+        }
+    }
+}
+
+
+
+// content wrapper
+.content-wrapper{
+    max-width: 1440px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+
+
+// top section design
+.top-section{
+    padding: 100px 0px;
+    background: $flatwhite;
+    &__left{
+        display: flex;
+        flex-direction: column;
+        max-width: 30%;
+        min-width: 300px;
+        .ctas{
+            display: flex;
+            margin-top: 20px;
+            a.secondary{
+                margin-left: 20px;
+            }
         }
     }
 }

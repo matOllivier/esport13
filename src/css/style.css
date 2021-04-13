@@ -12,29 +12,68 @@ a {
   text-decoration: none;
   color: inherit; }
 
-.button.primary {
+h1 {
+  font-size: 40px;
+  color: #223844;
+  margin-bottom: 20px;
+  margin-top: 0; }
+
+p {
+  color: #666171; }
+
+.button {
   font-size: 16px;
   font-weight: 600;
-  background: linear-gradient(90deg, #db2955 0%, #ffc24d 100%);
   text-decoration: none;
-  padding: 8px 15px;
   display: flex;
   align-items: center;
-  color: #fff;
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
   border-radius: 20px;
-  transition: 0.2s ease-in; }
-  .button.primary:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); }
+  transition: 0.2s ease-in;
+  white-space: nowrap;
+  cursor: pointer; }
+  .button.primary {
+    background: linear-gradient(90deg, #db2955 0%, #ffc24d 100%);
+    padding: 8px 15px;
+    color: #fff; }
+    .button.primary:hover {
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); }
+  .button.secondary {
+    padding: 7px 14px;
+    position: relative;
+    color: #223844;
+    z-index: 1; }
+    .button.secondary:before {
+      width: calc(100% + 2px);
+      height: calc(100% + 2px);
+      content: "";
+      position: absolute;
+      left: -1px;
+      top: -1px;
+      z-index: -1;
+      background: linear-gradient(90deg, #db2955 0%, #ffc24d 100%);
+      border-radius: 20px; }
+    .button.secondary:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: #f8fafa;
+      border-radius: 20px;
+      z-index: -1; }
+    .button.secondary:hover {
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); }
 
 .header {
   max-width: 100vw;
   position: sticky;
   top: 0;
   height: 80px;
-  background-color: #fff;
+  background-color: #f8fafa;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   padding: 0 20px;
   color: #223844;
@@ -116,6 +155,25 @@ a {
       opacity: 0;
       bottom: 0;
       right: 0; }
+
+.content-wrapper {
+  max-width: 1440px;
+  padding: 0 20px;
+  margin: 0 auto; }
+
+.top-section {
+  padding: 100px 0px;
+  background: #f8fafa; }
+  .top-section__left {
+    display: flex;
+    flex-direction: column;
+    max-width: 30%;
+    min-width: 300px; }
+    .top-section__left .ctas {
+      display: flex;
+      margin-top: 20px; }
+      .top-section__left .ctas a.secondary {
+        margin-left: 20px; }
 
 @media screen and (max-width: 768px) {
   .header__wrapper .nav {
