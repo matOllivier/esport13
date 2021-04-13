@@ -112,11 +112,13 @@ p {
           transition: 0.2s ease-in;
           background: -webkit-linear-gradient(#223844, #223844);
           -webkit-background-clip: text;
+          background-clip: text;
           -webkit-text-fill-color: transparent;
           font-size: 16px; }
           .header__wrapper .nav a:not(.button):not(.burger) span:hover {
             background: -webkit-linear-gradient(45deg, #db2955 0%, #ffc24d 100%);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent; }
     .header__wrapper .nav2 {
       display: flex;
@@ -163,17 +165,60 @@ p {
 
 .top-section {
   padding: 100px 0px;
-  background: #f8fafa; }
+  background: #f8fafa;
+  overflow: hidden;
+  position: relative; }
+  .top-section .content-wrapper {
+    display: flex;
+    flex-wrap: wrap; }
   .top-section__left {
     display: flex;
     flex-direction: column;
-    max-width: 30%;
-    min-width: 300px; }
+    flex-grow: 1;
+    width: 40%;
+    padding-right: 80px;
+    min-width: 394px;
+    z-index: 1;
+    justify-content: center; }
     .top-section__left .ctas {
       display: flex;
-      margin-top: 20px; }
-      .top-section__left .ctas a.secondary {
-        margin-left: 20px; }
+      margin-top: 20px;
+      flex-wrap: wrap; }
+      .top-section__left .ctas a {
+        margin-bottom: 20px; }
+      .top-section__left .ctas a.primary {
+        margin-right: 20px; }
+  .top-section__right {
+    display: flex;
+    width: 60%;
+    flex-grow: 1;
+    justify-content: center;
+    max-width: 800px;
+    align-items: center; }
+    .top-section__right .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      width: 100%;
+      height: 0; }
+      .top-section__right .video-wrapper iframe {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; }
+    .top-section__right img {
+      position: absolute;
+      right: -25px;
+      max-width: 500px;
+      transform: rotate(270deg); }
+
+@media screen and (max-width: 1024px) {
+  .top-section__left {
+    padding-right: 20%; }
+  .top-section__right {
+    margin-top: 50px;
+    max-width: unset; } }
 
 @media screen and (max-width: 768px) {
   .header__wrapper .nav {

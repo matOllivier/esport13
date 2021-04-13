@@ -142,11 +142,13 @@ p{
                     transition: 0.2s ease-in;
                     background: -webkit-linear-gradient($torneablack, $torneablack);
                     -webkit-background-clip: text;
+                    background-clip: text;
                     -webkit-text-fill-color: transparent;
                     font-size: 16px;
                     &:hover{
                         background: -webkit-linear-gradient(45deg, rgba(219,41,85,1) 0%, rgba(255,194,77,1) 100%);
                         -webkit-background-clip: text;
+                        background-clip: text;
                         -webkit-text-fill-color: transparent;
                     }
                 }
@@ -220,17 +222,73 @@ p{
 .top-section{
     padding: 100px 0px;
     background: $flatwhite;
+    overflow: hidden;
+    position: relative;
+    .content-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+    }
     &__left{
         display: flex;
         flex-direction: column;
-        max-width: 30%;
-        min-width: 300px;
+        flex-grow: 1;
+        width: 40%;
+        padding-right: 80px;
+        min-width: 394px;
+        z-index: 1;
+        justify-content: center;
         .ctas{
             display: flex;
             margin-top: 20px;
-            a.secondary{
-                margin-left: 20px;
+            flex-wrap: wrap;
+            a{
+                margin-bottom: 20px;
             }
+            a.primary{
+                margin-right: 20px;
+            }
+        }
+    }
+    &__right{
+        display: flex;
+        width: 60%;
+        flex-grow: 1;
+        justify-content: center;
+        max-width: 800px;
+        align-items: center;
+        .video-wrapper{
+            position: relative;
+            padding-bottom: 56.25%;
+            width: 100%;
+            height: 0;
+            iframe{
+                z-index: 1;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        img{
+            position: absolute;
+            right: -25px;
+            max-width: 500px;
+            transform: rotate(270deg);
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 1024px){
+    .top-section{
+        &__left{
+            padding-right: 20%;
+        }
+        &__right{
+            margin-top: 50px;
+            max-width: unset;
         }
     }
 }
