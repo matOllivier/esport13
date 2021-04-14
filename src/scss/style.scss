@@ -6,6 +6,7 @@
 $torneablack: #223844;
 $torneagrey: #666171;
 $flatwhite: #f8fafa;
+$torneapink: #db2955;
 $torneagradient: linear-gradient(90deg, rgba(219,41,85,1) 0%, rgba(255,194,77,1) 100%);
 
 
@@ -30,6 +31,20 @@ h1{
     color: $torneablack;
     margin-bottom: 20px;
     margin-top: 0;
+}
+
+h2{
+    font-size: 30px;
+    color: $torneablack;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+h4{
+    font-size: 18px;
+    color: $torneablack;
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
 p{
@@ -217,6 +232,28 @@ p{
 }
 
 
+// section title design
+.section-title{
+    max-width: 820px;
+    &__label{
+        display: flex;
+        align-items: center;
+        color: $torneapink;
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        &:before{
+            content: "";
+            width: 30px;
+            height: 3px;
+            border-radius: 3px;
+            background: $torneagradient;
+            display: block;
+            margin-right: 20px;
+        }
+    }
+}
+
 
 // top section design
 .top-section{
@@ -280,6 +317,26 @@ p{
 }
 
 
+//threep section design
+.threep-section{
+    padding: 100px 0;
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+        flex-wrap: wrap;
+    }
+    &__p{
+        min-width: 220px;
+        width: 30%;
+        img{
+            width: 50px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+
 
 @media screen and (max-width: 1024px){
     .top-section{
@@ -333,6 +390,15 @@ p{
                 width: 100vw;
                 opacity: 1;
             }
+        }
+    }
+    .threep-section{
+        &__wrapper{
+            flex-direction: column;
+        }
+        &__p{
+            margin-bottom: 50px;
+            width: 100%;
         }
     }
 }
