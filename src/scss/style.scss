@@ -549,6 +549,71 @@ p{
     }
 }
 
+.contact-section{
+    padding: 100px 0;
+    background-color: $flatwhite;
+    &__form{
+        display: flex;
+        justify-content: center;
+        width: 50%;
+        z-index: 1;
+        form{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        p{
+            width: 100%;
+            flex-grow: 1;
+            max-width: 500px;
+            label{
+                display: flex;
+                flex-direction: column;
+                color: $torneablack;
+                font-size: 20px;
+                input{
+                    border: 1px solid #dfdfdf;
+                    width: 100%;
+                    height: 20px;
+                    border-radius: 6px;
+                    padding: 10px;
+                    font-family: 'Poppins';
+                    &:focus{
+                        border: 2px solid #fec04d;
+                        padding: 9px;
+                        outline: none;
+                    }
+                }
+                textarea{
+                    border: 1px solid #dfdfdf;
+                    width: 100%;
+                    min-height: 50px;
+                    padding: 10px;
+                    border-radius: 6px;
+                    &:focus{
+                        border: 2px solid #fec04d;
+                        padding: 9px;
+                        outline: none;
+                    }
+                }
+            }
+            button{
+                border: none;
+                outline: none;
+                margin: 0 auto;
+                padding-right: 20%;
+            }
+        }
+    }
+    img{
+        position: absolute;
+        top: 100px;
+        right: 0;
+    }
+}
+
 
 
 @media screen and (max-width: 1024px){
