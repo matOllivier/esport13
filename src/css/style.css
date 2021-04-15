@@ -16,13 +16,15 @@ h1 {
   font-size: 40px;
   color: #223844;
   margin-bottom: 20px;
-  margin-top: 0; }
+  margin-top: 0;
+  line-height: 50px; }
 
 h2 {
   font-size: 30px;
   color: #223844;
   margin-bottom: 20px;
-  margin-top: 0; }
+  margin-top: 0;
+  line-height: 40px; }
 
 h4 {
   font-size: 18px;
@@ -32,6 +34,35 @@ h4 {
 
 p {
   color: #666171; }
+
+.svgcircle {
+  width: 100%;
+  max-width: 800px; }
+  .svgcircle circle {
+    transform: rotate(0deg);
+    transform-origin: center;
+    transform-box: fill-box; }
+  .svgcircle__1 {
+    -webkit-animation: svgcircle infinite 5s;
+            animation: svgcircle infinite 5s; }
+  .svgcircle__2 {
+    -webkit-animation: svgcircle infinite 8s;
+            animation: svgcircle infinite 8s; }
+  .svgcircle__2 {
+    -webkit-animation: svgcircle infinite 10s;
+            animation: svgcircle infinite 10s; }
+
+@-webkit-keyframes svgcircle {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+@keyframes svgcircle {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
 
 .button {
   font-size: 16px;
@@ -256,6 +287,67 @@ p {
     .threep-section__p img {
       width: 50px;
       margin-bottom: 10px; }
+
+.circle-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 100px 0;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content; }
+  .circle-section__circle {
+    position: relative;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin: 0 auto; }
+    .circle-section__circle svg {
+      height: -webkit-max-content;
+      height: -moz-max-content;
+      height: max-content; }
+    .circle-section__circle .img-container {
+      width: 70px;
+      position: absolute;
+      top: 0;
+      left: calc(50% - 35px);
+      transform: rotate(0deg) translateY(-50%);
+      transform-box: fill-box;
+      -webkit-animation: svgcircle2 60s infinite linear;
+              animation: svgcircle2 60s infinite linear;
+      height: 100%; }
+      .circle-section__circle .img-container img {
+        width: 70px;
+        margin-top: -10px;
+        -webkit-animation: rotateimg 60s infinite linear;
+                animation: rotateimg 60s infinite linear; }
+
+@-webkit-keyframes rotateimg {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(-360deg); } }
+
+@keyframes rotateimg {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(-360deg); } }
+
+@-webkit-keyframes svgcircle2 {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+@keyframes svgcircle2 {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
 
 @media screen and (max-width: 1024px) {
   .top-section__left {

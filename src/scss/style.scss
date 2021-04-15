@@ -31,6 +31,7 @@ h1{
     color: $torneablack;
     margin-bottom: 20px;
     margin-top: 0;
+    line-height: 50px;
 }
 
 h2{
@@ -38,6 +39,7 @@ h2{
     color: $torneablack;
     margin-bottom: 20px;
     margin-top: 0;
+    line-height: 40px;
 }
 
 h4{
@@ -49,6 +51,35 @@ h4{
 
 p{
     color: $torneagrey;
+}
+
+
+.svgcircle{
+    width: 100%;
+    max-width: 800px;
+    circle{
+        transform: rotate(0deg);
+        transform-origin: center;
+        transform-box: fill-box;
+    }
+    &__1{
+        animation: svgcircle infinite 5s;
+    }
+    &__2{
+        animation: svgcircle infinite 8s;
+    }
+    &__2{
+        animation: svgcircle infinite 10s;
+    }
+}
+
+@keyframes svgcircle{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
 
 
@@ -332,6 +363,56 @@ p{
         img{
             width: 50px;
             margin-bottom: 10px;
+        }
+    }
+}
+
+
+// circle section design
+.circle-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 0;
+    height: max-content;
+    &__circle{
+        position: relative;
+        height: max-content;
+        width: max-content;
+        margin: 0 auto;
+        svg{
+            height: max-content;
+        }
+        .img-container{
+            width: 70px;
+            position: absolute;
+            top: 0;
+            left: calc(50% - 35px);
+            transform: rotate(0deg) translateY(-50%);
+            transform-box: fill-box;
+            animation: svgcircle2 60s infinite linear;
+            height: 100%;
+            img{
+                width: 70px;
+                margin-top: -10px;
+                animation: rotateimg 60s infinite linear;
+                @keyframes rotateimg {
+                    0%{
+                        transform: rotate(0deg);
+                    }
+                    100%{
+                        transform: rotate(-360deg);
+                    }
+                }
+                @keyframes svgcircle2{
+                    0%{
+                        transform: rotate(0deg);
+                    }
+                    100%{
+                        transform: rotate(360deg);
+                    }
+                }
+            }
         }
     }
 }
