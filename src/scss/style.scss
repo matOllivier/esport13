@@ -383,12 +383,16 @@ p{
         svg{
             height: max-content;
         }
+        img{
+            border-radius: 50%;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
         .img-container{
             width: 70px;
             position: absolute;
             top: 0;
             left: calc(50% - 35px);
-            transform: rotate(0deg) translateY(-50%);
+            transform: rotate(0deg);
             transform-box: fill-box;
             animation: svgcircle2 60s infinite linear;
             height: 100%;
@@ -410,6 +414,134 @@ p{
                     }
                     100%{
                         transform: rotate(360deg);
+                    }
+                }
+            }
+        }
+        .img-container2{
+            width: 70px;
+            position: absolute;
+            top: 0;
+            left: calc(50% - 35px);
+            transform: rotate(45deg);
+            transform-box: fill-box;
+            animation: svgcircle3 120s infinite linear;
+            height: 100%;
+            padding-top: 13%;
+            img{
+                width: 45px;
+                margin-top: -10px;
+                animation: rotateimg2 120s infinite linear;
+                @keyframes rotateimg2 {
+                    0%{
+                        transform: rotate(45deg);
+                    }
+                    100%{
+                        transform: rotate(405deg);
+                    }
+                }
+                @keyframes svgcircle3{
+                    0%{
+                        transform: rotate(-45deg);
+                    }
+                    100%{
+                        transform: rotate(-405deg);
+                    }
+                }
+            }
+        }
+        .img-container3{
+            width: 70px;
+            position: absolute;
+            top: 0;
+            left: calc(50% - 35px);
+            transform: rotate(45deg);
+            transform-box: fill-box;
+            animation: svgcircle4 45s infinite linear;
+            height: 100%;
+            padding-top: 22%;
+            img{
+                width: 60px;
+                margin-top: -10px;
+                animation: rotateimg3 45s infinite linear;
+                @keyframes rotateimg3 {
+                    0%{
+                        transform: rotate(-90deg);
+                    }
+                    100%{
+                        transform: rotate(-450deg);
+                    }
+                }
+                @keyframes svgcircle4{
+                    0%{
+                        transform: rotate(90deg);
+                    }
+                    100%{
+                        transform: rotate(450deg);
+                    }
+                }
+            }
+        }
+        .img-container4{
+            width: 70px;
+            position: absolute;
+            top: 0;
+            left: calc(50% - 35px);
+            transform: rotate(45deg);
+            transform-box: fill-box;
+            animation: svgcircle5 120s infinite linear;
+            height: 100%;
+            padding-top: 11%;
+            img{
+                width: 60px;
+                margin-top: -10px;
+                animation: rotateimg4 120s infinite linear;
+                @keyframes rotateimg4 {
+                    0%{
+                        transform: rotate(-180deg);
+                    }
+                    100%{
+                        transform: rotate(-540deg);
+                    }
+                }
+                @keyframes svgcircle5{
+                    0%{
+                        transform: rotate(180deg);
+                    }
+                    100%{
+                        transform: rotate(540deg);
+                    }
+                }
+            }
+        }
+        .img-container5{
+            width: 70px;
+            position: absolute;
+            top: 0;
+            left: calc(50% - 35px);
+            transform: rotate(45deg);
+            transform-box: fill-box;
+            animation: svgcircle6 120s infinite linear;
+            height: 100%;
+            padding-top: 22%;
+            img{
+                width: 60px;
+                margin-top: -10px;
+                animation: rotateimg5 120s infinite linear;
+                @keyframes rotateimg5 {
+                    0%{
+                        transform: rotate(-225deg);
+                    }
+                    100%{
+                        transform: rotate(-585deg);
+                    }
+                }
+                @keyframes svgcircle6{
+                    0%{
+                        transform: rotate(225deg);
+                    }
+                    100%{
+                        transform: rotate(585deg);
                     }
                 }
             }

@@ -309,12 +309,15 @@ p {
       height: -webkit-max-content;
       height: -moz-max-content;
       height: max-content; }
+    .circle-section__circle img {
+      border-radius: 50%;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); }
     .circle-section__circle .img-container {
       width: 70px;
       position: absolute;
       top: 0;
       left: calc(50% - 35px);
-      transform: rotate(0deg) translateY(-50%);
+      transform: rotate(0deg);
       transform-box: fill-box;
       -webkit-animation: svgcircle2 60s infinite linear;
               animation: svgcircle2 60s infinite linear;
@@ -348,6 +351,166 @@ p {
     transform: rotate(0deg); }
   100% {
     transform: rotate(360deg); } }
+    .circle-section__circle .img-container2 {
+      width: 70px;
+      position: absolute;
+      top: 0;
+      left: calc(50% - 35px);
+      transform: rotate(45deg);
+      transform-box: fill-box;
+      -webkit-animation: svgcircle3 120s infinite linear;
+              animation: svgcircle3 120s infinite linear;
+      height: 100%;
+      padding-top: 13%; }
+      .circle-section__circle .img-container2 img {
+        width: 45px;
+        margin-top: -10px;
+        -webkit-animation: rotateimg2 120s infinite linear;
+                animation: rotateimg2 120s infinite linear; }
+
+@-webkit-keyframes rotateimg2 {
+  0% {
+    transform: rotate(45deg); }
+  100% {
+    transform: rotate(405deg); } }
+
+@keyframes rotateimg2 {
+  0% {
+    transform: rotate(45deg); }
+  100% {
+    transform: rotate(405deg); } }
+
+@-webkit-keyframes svgcircle3 {
+  0% {
+    transform: rotate(-45deg); }
+  100% {
+    transform: rotate(-405deg); } }
+
+@keyframes svgcircle3 {
+  0% {
+    transform: rotate(-45deg); }
+  100% {
+    transform: rotate(-405deg); } }
+    .circle-section__circle .img-container3 {
+      width: 70px;
+      position: absolute;
+      top: 0;
+      left: calc(50% - 35px);
+      transform: rotate(45deg);
+      transform-box: fill-box;
+      -webkit-animation: svgcircle4 45s infinite linear;
+              animation: svgcircle4 45s infinite linear;
+      height: 100%;
+      padding-top: 22%; }
+      .circle-section__circle .img-container3 img {
+        width: 60px;
+        margin-top: -10px;
+        -webkit-animation: rotateimg3 45s infinite linear;
+                animation: rotateimg3 45s infinite linear; }
+
+@-webkit-keyframes rotateimg3 {
+  0% {
+    transform: rotate(-90deg); }
+  100% {
+    transform: rotate(-450deg); } }
+
+@keyframes rotateimg3 {
+  0% {
+    transform: rotate(-90deg); }
+  100% {
+    transform: rotate(-450deg); } }
+
+@-webkit-keyframes svgcircle4 {
+  0% {
+    transform: rotate(90deg); }
+  100% {
+    transform: rotate(450deg); } }
+
+@keyframes svgcircle4 {
+  0% {
+    transform: rotate(90deg); }
+  100% {
+    transform: rotate(450deg); } }
+    .circle-section__circle .img-container4 {
+      width: 70px;
+      position: absolute;
+      top: 0;
+      left: calc(50% - 35px);
+      transform: rotate(45deg);
+      transform-box: fill-box;
+      -webkit-animation: svgcircle5 120s infinite linear;
+              animation: svgcircle5 120s infinite linear;
+      height: 100%;
+      padding-top: 11%; }
+      .circle-section__circle .img-container4 img {
+        width: 60px;
+        margin-top: -10px;
+        -webkit-animation: rotateimg4 120s infinite linear;
+                animation: rotateimg4 120s infinite linear; }
+
+@-webkit-keyframes rotateimg4 {
+  0% {
+    transform: rotate(-180deg); }
+  100% {
+    transform: rotate(-540deg); } }
+
+@keyframes rotateimg4 {
+  0% {
+    transform: rotate(-180deg); }
+  100% {
+    transform: rotate(-540deg); } }
+
+@-webkit-keyframes svgcircle5 {
+  0% {
+    transform: rotate(180deg); }
+  100% {
+    transform: rotate(540deg); } }
+
+@keyframes svgcircle5 {
+  0% {
+    transform: rotate(180deg); }
+  100% {
+    transform: rotate(540deg); } }
+    .circle-section__circle .img-container5 {
+      width: 70px;
+      position: absolute;
+      top: 0;
+      left: calc(50% - 35px);
+      transform: rotate(45deg);
+      transform-box: fill-box;
+      -webkit-animation: svgcircle6 120s infinite linear;
+              animation: svgcircle6 120s infinite linear;
+      height: 100%;
+      padding-top: 22%; }
+      .circle-section__circle .img-container5 img {
+        width: 60px;
+        margin-top: -10px;
+        -webkit-animation: rotateimg5 120s infinite linear;
+                animation: rotateimg5 120s infinite linear; }
+
+@-webkit-keyframes rotateimg5 {
+  0% {
+    transform: rotate(-225deg); }
+  100% {
+    transform: rotate(-585deg); } }
+
+@keyframes rotateimg5 {
+  0% {
+    transform: rotate(-225deg); }
+  100% {
+    transform: rotate(-585deg); } }
+
+@-webkit-keyframes svgcircle6 {
+  0% {
+    transform: rotate(225deg); }
+  100% {
+    transform: rotate(585deg); } }
+
+@keyframes svgcircle6 {
+  0% {
+    transform: rotate(225deg); }
+  100% {
+    transform: rotate(585deg); } }
 
 @media screen and (max-width: 1024px) {
   .top-section__left {
