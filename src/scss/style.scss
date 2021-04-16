@@ -88,7 +88,7 @@ p{
 // buttons design
 .button{
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -99,14 +99,14 @@ p{
     cursor: pointer;
     &.primary{
         background: $torneagradient;
-        padding: 8px 15px;
+        padding: 8px 30px;
         color: #fff;
         &:hover{
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
     }
     &.secondary{
-        padding: 7px 14px;
+        padding: 7px 29px;
         position: relative;
         color: $torneablack;
         z-index: 1;
@@ -147,13 +147,12 @@ p{
     top: 0;
     height: 80px;
     background-color: $flatwhite;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     padding: 0 20px;
     color: $torneablack;
     z-index: 10;
     &__wrapper{
         height: 100%;
-        max-width: 1400px;
+        max-width: 1100px;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
@@ -167,6 +166,7 @@ p{
                 max-height: 50px;
                 margin-right: 10px;
                 z-index: -1;
+                width: 50px;
             }
             span{
                 font-weight: 700;
@@ -183,8 +183,8 @@ p{
                 outline: none;
                 span{
                     text-decoration: none;
-                    padding: 10px;
-                    font-weight: 500;
+                    padding: 15px;
+                    font-weight: 400;
                     transition: 0.2s ease-in;
                     background: -webkit-linear-gradient($torneablack, $torneablack);
                     -webkit-background-clip: text;
@@ -257,7 +257,7 @@ p{
 
 // content wrapper
 .content-wrapper{
-    max-width: 1440px;
+    max-width: 1140px;
     padding: 0 20px;
     margin: 0 auto;
     width: 100%;
@@ -388,11 +388,12 @@ p{
     height: max-content;
     &__circle{
         position: relative;
-        height: max-content;
+        height: 80%;
         width: max-content;
         margin: 0 auto;
+        max-width: 100%;
         svg{
-            height: max-content;
+            height: 80%;
         }
         img{
             border-radius: 50%;
@@ -692,9 +693,25 @@ p{
                     align-items: center;
                     justify-content: center;
                     position: relative;
-                    z-index: 1;
-                    border: 2px solid #ee7951;
                     margin-right: 20px;
+                    &:before{
+                        content:"";
+                        position: absolute;
+                        width: calc(100% + 0px);
+                        height: calc(100% + 0px);
+                        background-color: #fff;
+                        z-index: -1;
+                        border-radius: 50%;
+                    }
+                    &:after{
+                        content:"";
+                        position: absolute;
+                        width: calc(100% + 4px);
+                        height: calc(100% + 4px);
+                        background: $torneagradient;
+                        z-index: -2;
+                        border-radius: 50%;
+                    }
                 }
                 div{
                     h4{
@@ -722,6 +739,7 @@ p{
         background: none;
         border: 2px solid #fff;
         margin-top: 50px;
+        padding: 6px 28px;
     }
     .section-title{
         max-width: unset;
@@ -739,7 +757,7 @@ p{
         right: 0px;
         top: 0;
         height: 100%;
-        width: max-content;
+        width: auto;
         color: #fff !important;
     }
 }
@@ -784,9 +802,24 @@ p{
     }
 }
 
+@media screen and (max-width: 850px){
+    .header{
+        .logo{
+            span{
+                display: none;
+            }
+        }
+    }
+}
+
 
 @media screen and (max-width:768px){
     .header{
+        .logo{
+            span{
+                display: block;
+            }
+        }
         &__wrapper{
             .nav{
                 position: fixed;
