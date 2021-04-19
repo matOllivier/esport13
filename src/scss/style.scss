@@ -277,7 +277,7 @@ p{
         &:before{
             content: "";
             width: 30px;
-            height: 3px;
+            height: 1px;
             border-radius: 3px;
             background: $torneagradient;
             display: block;
@@ -301,7 +301,7 @@ p{
         display: flex;
         flex-direction: column;
         flex-grow: 1;
-        width: 40%;
+        width: 50%;
         padding-right: 80px;
         min-width: 394px;
         z-index: 1;
@@ -320,7 +320,7 @@ p{
     }
     &__right{
         display: flex;
-        width: 60%;
+        width: 50%;
         flex-grow: 1;
         justify-content: center;
         max-width: 800px;
@@ -347,7 +347,11 @@ p{
         }
     }
     &.deux{
+        .top-section__left{
+            width: 60%;
+        }
         .top-section__right{
+            width: 40%;
             img{
                 position: absolute;
                 right: 0;
@@ -386,6 +390,10 @@ p{
     justify-content: center;
     padding: 100px 0;
     height: max-content;
+    .section-title{
+        margin: 0 auto;
+        width: max-content;
+    }
     &__circle{
         position: relative;
         height: 80%;

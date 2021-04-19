@@ -219,7 +219,7 @@ p {
     .section-title__label:before {
       content: "";
       width: 30px;
-      height: 3px;
+      height: 1px;
       border-radius: 3px;
       background: linear-gradient(90deg, #db2955 0%, #ffc24d 100%);
       display: block;
@@ -237,7 +237,7 @@ p {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    width: 40%;
+    width: 50%;
     padding-right: 80px;
     min-width: 394px;
     z-index: 1;
@@ -252,7 +252,7 @@ p {
         margin-right: 20px; }
   .top-section__right {
     display: flex;
-    width: 60%;
+    width: 50%;
     flex-grow: 1;
     justify-content: center;
     max-width: 800px;
@@ -274,11 +274,15 @@ p {
       right: -25px;
       max-width: 500px;
       transform: rotate(270deg); }
-  .top-section.deux .top-section__right img {
-    position: absolute;
-    right: 0;
-    max-width: unset;
-    transform: unset; }
+  .top-section.deux .top-section__left {
+    width: 60%; }
+  .top-section.deux .top-section__right {
+    width: 40%; }
+    .top-section.deux .top-section__right img {
+      position: absolute;
+      right: 0;
+      max-width: unset;
+      transform: unset; }
 
 .threep-section {
   padding: 100px 0; }
@@ -302,6 +306,11 @@ p {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content; }
+  .circle-section .section-title {
+    margin: 0 auto;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content; }
   .circle-section__circle {
     position: relative;
     height: 80%;
