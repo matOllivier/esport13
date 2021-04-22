@@ -570,6 +570,60 @@ p{
                 }
             }
         }
+        .member{
+            display: flex;
+            align-items: center;
+            position: absolute;
+            &.first{
+                top: 0;
+                left: -50px;
+                .info{
+                    margin-right: 30px;
+                }
+                img{
+                    height: 75px;
+                }
+            }
+            &.second{
+                top: 40%;
+                left: -200px;
+            }
+            &.third{
+                bottom: 0;
+                left: 0;
+            }
+            &.fourth{
+                top: -17px;
+                right: -50px;
+            }
+            &.fifth{
+                top: 40%;
+                right: -150px;
+            }
+            &.six{
+                bottom: 0;
+                right: 0;
+            }
+            img{
+                box-shadow: none;
+                height: 100px;
+            }
+            .info{
+                display: flex;
+                flex-direction: column;
+                span{
+                    color: #340913;
+                }
+                span:nth-of-type(1){
+                    font-size: 19px;
+                    font-weight: 500;
+                }
+                span:nth-of-type(2){
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+            }
+        }
     }
 }
 
@@ -868,6 +922,28 @@ p{
     }
 }
 
+.apropos-section{
+    padding: 100px 0;
+    background-color: $flatwhite;
+    .content-wrapper{
+        display: flex;
+    }
+    &__left{
+        width: 50%;
+    }
+    &__right{
+        width: 50%;
+        display: flex;
+        img{
+            width: 100%;
+            margin-top: 50px;
+        }
+    }
+    iframe{
+        margin-top: 50px;
+    }
+}
+
 
 
 @media screen and (max-width: 1024px){
@@ -904,6 +980,44 @@ p{
     .tarif-section{
         img{
             display: none;
+        }
+    }
+    .circle-section{
+        .member{
+            display: flex;
+            flex-direction: column;
+            .info{
+                order: 2;
+                display: flex;
+                align-items: center;
+            }
+            img{
+                order: 1;
+            }
+            &.first{
+                left: 0;
+                .info{
+                    margin-right: 0;
+                }
+                img{
+                    margin-bottom: 10px;
+                }
+            }
+            &.second{
+                left: 0;
+            }
+            &.third{
+                bottom: -50px;
+            }
+            &.fourth{
+                right: 0;
+            }
+            &.fifth{
+                right: 0;
+            }
+            &.six{
+                bottom: -50px;
+            }
         }
     }
 }
@@ -947,7 +1061,7 @@ p{
                 &.open{
                     display: flex;
                     width: 80%;
-                    padding: 20px;
+                    padding: 40px;
                 }
             }
             .nav2{
@@ -991,6 +1105,14 @@ p{
                     margin-bottom: 50px;
                 }
             }
+        }
+    }
+    .apropos-section{
+        &__left{
+            width: 100%;
+        }
+        &__right{
+            display: none;
         }
     }
 }
