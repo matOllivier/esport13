@@ -477,9 +477,10 @@ p {
         content: "";
         border-radius: 50%; }
       .threep-section__p span img {
-        z-index: 1; }
+        z-index: 1;
+        width: 20px; }
     .threep-section__p img {
-      width: 20px;
+      width: 50px;
       margin-top: 10px;
       margin-bottom: 10px; }
 
