@@ -923,7 +923,9 @@ p {
     position: relative; }
   .plans-section__top p {
     max-width: 500px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    z-index: 1;
+    position: relative; }
 
 .plans-section__bot {
   z-index: 2;
