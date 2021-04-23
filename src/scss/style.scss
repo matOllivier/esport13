@@ -253,6 +253,60 @@ p{
     }
 }
 
+.footer{
+    background-color: $flatwhite;
+    padding: 100px 0;
+    .content-wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+    .col1{
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+        &__logo{
+            display: flex;
+            img{
+                max-width: 30px;
+                margin-right: 10px;
+            }
+            span{
+                color: $torneablack;
+                font-weight: 700;
+            }
+        }
+    }
+    .col2{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-right: 20px;
+        a{
+            width: 50%;
+            color: $torneagrey;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+    .col3{
+        width: min-content;
+        h2{
+            width: max-content;
+            margin-right: 0;
+        }
+        iframe{
+            margin-top: 20px;
+            height: 156px;
+            max-width: 100%;
+            .widgetBody-1YvOmj{
+                display: none;
+            }
+        }
+    }
+}
+
 
 
 // content wrapper
@@ -1212,6 +1266,40 @@ p{
                 width: 100vw;
                 opacity: 1;
             }
+        }
+    }
+    .footer{
+        .content-wrapper{
+            flex-direction: column;
+        }
+        .col1{
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            margin-right: 0;
+            margin-bottom: 50px;
+            p{
+                text-align: center;
+            }
+        }
+        .col2{
+            width: max-content;
+            max-width: 100%;
+            margin: 0 auto 50px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            a{
+                width: auto;
+                margin-right: 20px;
+            }
+        }
+        .col3{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 0 auto;
         }
     }
     .threep-section{
