@@ -225,6 +225,114 @@ p {
       display: block;
       margin-right: 20px; }
 
+.tournament-section {
+  background-color: #f8fafa;
+  padding: 100px 0; }
+  .tournament-section .tournoi {
+    max-width: 100%; }
+  .tournament-section .second-title {
+    margin-top: 100px; }
+  .tournament-section__wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; }
+    .tournament-section__wrapper .item {
+      width: calc(25% - 20px);
+      max-width: 300px;
+      margin-top: 20px;
+      margin-right: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-color: #fff;
+      transition: 0.2s ease-in;
+      display: flex;
+      flex-direction: column;
+      min-width: 250px; }
+      .tournament-section__wrapper .item:hover {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); }
+      .tournament-section__wrapper .item img {
+        max-width: 100%; }
+      .tournament-section__wrapper .item .info {
+        padding: 20px; }
+        .tournament-section__wrapper .item .info h3 {
+          margin-top: 0;
+          margin-bottom: 10px; }
+        .tournament-section__wrapper .item .info .labels {
+          display: flex; }
+          .tournament-section__wrapper .item .info .labels span {
+            background-color: rgba(220, 46, 85, 0.1);
+            padding: 7px 15px;
+            color: #223844;
+            font-weight: 600;
+            font-size: 13px;
+            border-radius: 5px;
+            white-space: nowrap; }
+            .tournament-section__wrapper .item .info .labels span:nth-of-type(2) {
+              background-color: rgba(255, 190, 78, 0.2);
+              margin-left: 10px; }
+        .tournament-section__wrapper .item .info .jauge {
+          margin-top: 20px;
+          margin-bottom: 20px; }
+          .tournament-section__wrapper .item .info .jauge__prices {
+            color: #223844;
+            font-weight: 700;
+            display: flex;
+            width: 100%;
+            justify-content: space-between; }
+          .tournament-section__wrapper .item .info .jauge__slider {
+            height: 10px;
+            width: 100%;
+            position: relative; }
+            .tournament-section__wrapper .item .info .jauge__slider span {
+              position: absolute;
+              border-radius: 20px;
+              height: 100%; }
+              .tournament-section__wrapper .item .info .jauge__slider span:nth-of-type(1) {
+                background-color: #f8fafa;
+                width: 100%; }
+              .tournament-section__wrapper .item .info .jauge__slider span:nth-of-type(2) {
+                background: linear-gradient(90deg, #db2955 0%, #ffc24d 100%);
+                width: 80%; }
+        .tournament-section__wrapper .item .info .rates {
+          display: flex;
+          justify-content: space-between; }
+          .tournament-section__wrapper .item .info .rates__rate {
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+            .tournament-section__wrapper .item .info .rates__rate > span {
+              border-radius: 50%;
+              background: linear-gradient(90deg, #db2955 0%, #ffc24d 100%);
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              max-width: 40px;
+              max-height: 40px;
+              width: 40px;
+              height: 40px;
+              position: relative; }
+              .tournament-section__wrapper .item .info .rates__rate > span:before {
+                position: absolute;
+                width: 36px;
+                height: 36px;
+                background: #fff;
+                content: "";
+                border-radius: 50%; }
+              .tournament-section__wrapper .item .info .rates__rate > span img {
+                z-index: 1; }
+            .tournament-section__wrapper .item .info .rates__rate div {
+              display: flex;
+              flex-direction: column;
+              margin-left: 10px; }
+              .tournament-section__wrapper .item .info .rates__rate div span {
+                font-size: 13px;
+                color: #223844; }
+                .tournament-section__wrapper .item .info .rates__rate div span:nth-of-type(1) {
+                  font-weight: 600; }
+        .tournament-section__wrapper .item .info a {
+          margin-top: 20px;
+          margin: 20px auto 0; }
+
 .top-section {
   padding: 100px 0px;
   background: #f8fafa;

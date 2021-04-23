@@ -286,6 +286,141 @@ p{
     }
 }
 
+.tournament-section{
+    background-color: $flatwhite;
+    padding: 100px 0;
+    .tournoi{
+        max-width: 100%;
+    }
+    .second-title{
+        margin-top: 100px;
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        .item{
+            width: calc(25% - 20px);
+            max-width: 300px;
+            margin-top: 20px;
+            margin-right: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #fff;
+            transition: 0.2s ease-in;
+            display: flex;
+            flex-direction: column;
+            min-width: 250px;
+            &:hover{
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            }
+            img{
+                max-width: 100%;
+            }
+            .info{
+                padding: 20px;
+                h3{
+                    margin-top: 0;
+                    margin-bottom: 10px;
+                }
+                .labels{
+                    display: flex;
+                    span{
+                        background-color: rgba(220,46,85,0.1);
+                        padding:7px 15px;
+                        color: #223844;
+                        font-weight: 600;
+                        font-size: 13px;
+                        border-radius: 5px;
+                        white-space: nowrap;
+                        &:nth-of-type(2){
+                            background-color: rgba(256,190,78,0.2);
+                            margin-left: 10px;
+                        }
+                    }
+                }
+                .jauge{
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    &__prices{
+                        color: #223844;
+                        font-weight: 700;
+                        display: flex;
+                        width: 100%;
+                        justify-content: space-between;
+                    }
+                    &__slider{
+                        height: 10px;
+                        width: 100%;
+                        position: relative;
+                        span{
+                            position: absolute;
+                            border-radius: 20px;
+                            height: 100%;
+                            &:nth-of-type(1){
+                                background-color: $flatwhite;
+                                width: 100%;
+                            }
+                            &:nth-of-type(2){
+                                background: $torneagradient;
+                                width: 80%;
+                            }
+                        }
+                    }
+                }
+                .rates{
+                    display: flex;
+                    justify-content: space-between;
+                    &__rate{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        & > span{
+                            border-radius: 50%;
+                            background: $torneagradient;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            max-width: 40px;
+                            max-height: 40px;
+                            width: 40px;
+                            height: 40px;
+                            position: relative;
+                            &:before{
+                                position: absolute;
+                                width: 36px;
+                                height: 36px;
+                                background: #fff;
+                                content: "";
+                                border-radius: 50%;
+                            }
+                            img{
+                                z-index: 1;
+                            }
+                        }
+                        div{
+                            display: flex;
+                            flex-direction: column;
+                            margin-left: 10px;
+                            span{
+                                font-size: 13px;
+                                color: $torneablack;
+                                &:nth-of-type(1){
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+                    }
+                }
+                a{
+                    margin-top: 20px;
+                    margin: 20px auto 0;
+                }
+            }
+        }
+    }
+}
+
 
 // top section design
 .top-section{
