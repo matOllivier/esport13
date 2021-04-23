@@ -216,6 +216,13 @@ p {
                         background-clip: text;
                         -webkit-text-fill-color: transparent;
                     }
+
+                    &.active{
+                        background: -webkit-linear-gradient(45deg, rgba(219, 41, 85, 1) 0%, rgba(255, 194, 77, 1) 100%);
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
                 }
             }
         }

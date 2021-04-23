@@ -163,6 +163,11 @@ p {
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent; }
+          .header__wrapper .nav a:not(.button):not(.burger) span.active {
+            background: -webkit-linear-gradient(45deg, #db2955 0%, #ffc24d 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent; }
     .header__wrapper .nav2 {
       display: flex;
       align-items: center; }
