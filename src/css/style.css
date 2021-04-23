@@ -444,7 +444,8 @@ p {
       position: absolute;
       right: 0;
       max-width: unset;
-      transform: unset; }
+      transform: unset;
+      width: 50%; }
 
 .threep-section {
   padding: 100px 0; }
